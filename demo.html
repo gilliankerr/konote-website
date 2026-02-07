@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Try the KoNote2 self-service registration form. See how clients can register for programs online.">
+  <title>Try It — KoNote2</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Demo page specific styles */
+    .workflow-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--space-6);
+      margin: var(--space-8) 0;
+      counter-reset: step;
+    }
+
+    .workflow-step {
+      text-align: center;
+      padding: var(--space-6) var(--space-4);
+      position: relative;
+    }
+
+    .workflow-step::before {
+      counter-increment: step;
+      content: counter(step);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: var(--color-primary);
+      color: white;
+      font-weight: 700;
+      font-size: var(--font-size-lg);
+      border-radius: 50%;
+      margin-bottom: var(--space-4);
+    }
+
+    .workflow-step h3 {
+      font-size: var(--font-size-base);
+      margin-bottom: var(--space-2);
+    }
+
+    .workflow-step p {
+      color: var(--color-text-muted);
+      font-size: var(--font-size-sm);
+      margin-bottom: 0;
+    }
+
+    .demo-frame-container {
+      max-width: 720px;
+      margin: 0 auto;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--color-bg);
+      box-shadow: var(--shadow-md);
+    }
+
+    .demo-frame-header {
+      background: var(--color-bg-alt);
+      border-bottom: 1px solid var(--color-border);
+      padding: var(--space-3) var(--space-4);
+      font-size: var(--font-size-sm);
+      color: var(--color-text-muted);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .demo-frame-header svg {
+      flex-shrink: 0;
+    }
+
+    .demo-frame-container iframe {
+      display: block;
+      width: 100%;
+      height: 700px;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .demo-frame-container iframe {
+        height: 600px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-nav">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo">KoNote2</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">
+        Menu
+      </button>
+      <nav class="site-nav" id="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="evidence.html">Evidence</a>
+        <a href="getting-started.html">Getting Started</a>
+        <a href="documentation.html">Documentation</a>
+        <a href="security.html">Security</a>
+        <a href="services.html">Services</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <h1>Try It</h1>
+        <p class="hero-tagline">
+          See how clients register for programs through KoNote2's
+          self-service intake form.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <h2>How Self-Service Registration Works</h2>
+          <p>
+            Staff create a registration link, share it with clients, and review
+            submissions — all without paper forms or manual data entry.
+          </p>
+        </div>
+
+        <div class="workflow-steps">
+          <div class="workflow-step">
+            <h3>Staff Create a Link</h3>
+            <p>
+              Choose which program, which fields to collect,
+              and set an optional deadline or capacity limit.
+            </p>
+          </div>
+          <div class="workflow-step">
+            <h3>Clients Fill Out the Form</h3>
+            <p>
+              Clients visit the link (or it's embedded on your website)
+              and submit their information securely.
+            </p>
+          </div>
+          <div class="workflow-step">
+            <h3>Staff Review and Approve</h3>
+            <p>
+              Submissions appear in the dashboard. Staff can approve,
+              waitlist, or merge with existing records.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt-bg">
+      <div class="container">
+        <div class="section-header">
+          <h2>Live Registration Form</h2>
+          <p>
+            This is a real registration form running on a live KoNote2 instance.
+            Try filling it out to see the experience your clients would have.
+          </p>
+        </div>
+
+        <div class="demo-frame-container">
+          <div class="demo-frame-header">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M8 5v3M8 10h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            This is a live demo — submissions go to a test environment
+          </div>
+          <iframe
+            src="https://konote-redux-production.up.railway.app/register/demo/?embed=1"
+            title="KoNote2 Registration Form Demo"
+            loading="lazy"
+            allow="forms">
+          </iframe>
+        </div>
+
+        <div class="notice notice-info" style="max-width: 720px; margin: var(--space-6) auto 0;">
+          <p class="notice-title">About this demo</p>
+          <p>
+            This form is running on a live KoNote2 demo instance. Any information
+            you enter is for demonstration purposes only. The form fields, layout,
+            and branding are all customisable by each agency.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <h2>What Staff See</h2>
+          <p>
+            When a client submits the form, staff see the submission in their
+            dashboard and can take action.
+          </p>
+        </div>
+
+        <div class="feature-grid" style="max-width: 800px; margin: 0 auto;">
+          <div class="feature-item">
+            <h3>Duplicate Detection</h3>
+            <p>
+              KoNote2 automatically checks for matching names and email addresses,
+              so staff can merge with an existing record instead of creating a duplicate.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h3>Customisable Fields</h3>
+            <p>
+              Each registration link can include different field groups — contact info,
+              demographics, emergency contacts, consent forms, and more.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h3>Capacity and Deadlines</h3>
+            <p>
+              Set a maximum number of registrations or a closing date.
+              The form automatically closes when limits are reached.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h3>Embeddable</h3>
+            <p>
+              Embed the form on your agency's website with a simple iframe code,
+              or share the direct link by email or social media.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt-bg">
+      <div class="container text-center">
+        <h2>Ready to set this up for your agency?</h2>
+        <p class="text-muted mb-8">
+          Registration is one of many features in KoNote2. Read the getting started guide
+          to evaluate the full system.
+        </p>
+        <div class="btn-group" style="justify-content: center;">
+          <a href="getting-started.html" class="btn btn-primary">Getting Started Guide</a>
+          <a href="features.html" class="btn btn-secondary">See All Features</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-links">
+        <a href="https://github.com/gilliankerr/KoNote-Redux">GitHub Repository</a>
+        <a href="documentation.html">Documentation</a>
+        <a href="faq.html">FAQ</a>
+        <a href="services.html">Professional Services</a>
+      </div>
+      <p class="footer-copyright">
+        KoNote2 is open source software under the MIT License.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.site-nav');
+    if (navToggle && nav) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
+    }
+  </script>
+</body>
+</html>
