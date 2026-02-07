@@ -6,6 +6,10 @@
   <meta name="description" content="Try the KoNote2 self-service registration form. See how participants can register for programs online.">
   <title>Try It — KoNote2</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
   <style>
     /* Demo page specific styles */
     .workflow-steps {
@@ -115,8 +119,8 @@
       <div class="container">
         <h1>Try It</h1>
         <p class="hero-tagline">
-          See how participants register for programs through KoNote2's
-          self-service intake form.
+          This is a live registration form running on a real KoNote2 instance.
+          Try filling it out to see the experience your participants would have.
         </p>
       </div>
     </section>
@@ -124,46 +128,11 @@
     <section>
       <div class="container">
         <div class="section-header">
-          <h2>How Self-Service Registration Works</h2>
           <p>
-            Staff create a registration link, share it with participants, and review
-            submissions — all without paper forms or manual data entry.
-          </p>
-        </div>
-
-        <div class="workflow-steps">
-          <div class="workflow-step">
-            <h3>Staff Create a Link</h3>
-            <p>
-              Choose which program, which fields to collect,
-              and set an optional deadline or capacity limit.
-            </p>
-          </div>
-          <div class="workflow-step">
-            <h3>Participants Fill Out the Form</h3>
-            <p>
-              Participants visit the link (or it's embedded on your website)
-              and submit their information securely.
-            </p>
-          </div>
-          <div class="workflow-step">
-            <h3>Staff Review and Approve</h3>
-            <p>
-              Submissions appear in the dashboard. Staff can approve,
-              waitlist, or merge with existing records.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="alt-bg">
-      <div class="container">
-        <div class="section-header">
-          <h2>Live Registration Form</h2>
-          <p>
-            This is a real registration form running on a live KoNote2 instance.
-            Try filling it out to see the experience your participants would have.
+            This demo shows a simplified version. KoNote2 includes over 50 configurable
+            fields across 9 field groups — contact details, emergency contacts, demographics,
+            accessibility, referral info, consent forms, and more. Your agency chooses which
+            fields and groups to include, and can add custom ones in minutes. No developer needed.
           </p>
         </div>
 
@@ -173,7 +142,7 @@
               <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
               <path d="M8 5v3M8 10h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
-            This is a live demo — submissions go to a test environment
+            Live demo — submissions go to a test environment, not real data
           </div>
           <iframe
             src="https://konote-redux-production.up.railway.app/register/demo/?embed=1"
@@ -182,72 +151,17 @@
             allow="forms">
           </iframe>
         </div>
-
-        <div class="notice notice-info" style="max-width: 720px; margin: var(--space-6) auto 0;">
-          <p class="notice-title">About this demo</p>
-          <p>
-            This form is running on a live KoNote2 demo instance. Any information
-            you enter is for demonstration purposes only. The form fields, layout,
-            and branding are all customisable by each agency.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-header">
-          <h2>What Staff See</h2>
-          <p>
-            When a participant submits the form, staff see the submission in their
-            dashboard and can take action.
-          </p>
-        </div>
-
-        <div class="feature-grid" style="max-width: 800px; margin: 0 auto;">
-          <div class="feature-item">
-            <h3>Duplicate Detection</h3>
-            <p>
-              KoNote2 automatically checks for matching names and email addresses,
-              so staff can merge with an existing record instead of creating a duplicate.
-            </p>
-          </div>
-          <div class="feature-item">
-            <h3>Customisable Fields</h3>
-            <p>
-              Each registration link can include different field groups — contact info,
-              demographics, emergency contacts, consent forms, and more.
-            </p>
-          </div>
-          <div class="feature-item">
-            <h3>Capacity and Deadlines</h3>
-            <p>
-              Set a maximum number of registrations or a closing date.
-              The form automatically closes when limits are reached.
-            </p>
-          </div>
-          <div class="feature-item">
-            <h3>Embeddable</h3>
-            <p>
-              Embed the form on your agency's website with a simple iframe code,
-              or share the direct link by email or social media.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
 
     <section class="alt-bg">
       <div class="container text-center">
-        <h2>Ready to set this up for your agency?</h2>
         <p class="text-muted mb-8">
-          Registration is one of many features in KoNote2. Read the getting started guide
-          to evaluate the full system.
+          Registration is one of many features in KoNote2.
+          See the <a href="features.html">features overview</a> or
+          read the <a href="getting-started.html">getting started guide</a>
+          to learn more.
         </p>
-        <div class="btn-group" style="justify-content: center;">
-          <a href="getting-started.html" class="btn btn-primary">Getting Started Guide</a>
-          <a href="features.html" class="btn btn-secondary">See All Features</a>
-        </div>
       </div>
     </section>
   </main>
