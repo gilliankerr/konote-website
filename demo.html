@@ -81,14 +81,9 @@
     .demo-frame-container iframe {
       display: block;
       width: 100%;
-      height: 700px;
+      min-height: 600px;
       border: none;
-    }
-
-    @media (max-width: 768px) {
-      .demo-frame-container iframe {
-        height: 600px;
-      }
+      transition: height 0.15s ease;
     }
   </style>
 </head>
@@ -189,6 +184,16 @@
         navToggle.setAttribute('aria-expanded', isOpen);
       });
     }
+
+    // Auto-resize embedded registration form to eliminate iframe scrollbar
+    window.addEventListener('message', function(event) {
+      if (event.data && event.data.type === 'konote-embed-resize') {
+        var iframe = document.querySelector('.demo-frame-container iframe');
+        if (iframe) {
+          iframe.style.height = event.data.height + 'px';
+        }
+      }
+    });
   </script>
 </body>
 </html>
