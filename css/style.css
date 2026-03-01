@@ -226,11 +226,24 @@ pre code {
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  gap: 8px;
 }
 
-.site-logo img {
-  height: 32px;
+.site-logo-mark {
+  height: 28px;
   width: auto;
+}
+
+.site-logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #808285;
+  line-height: 1;
+}
+
+.site-logo-ko {
+  color: var(--color-primary);
 }
 
 .site-nav {
